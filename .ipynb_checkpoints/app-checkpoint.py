@@ -141,8 +141,8 @@ st.sidebar.markdown("# Examining societal impact of research with Semantic Hyper
 st.sidebar.markdown("## Navigation")
 selection = st.sidebar.radio("Go to", list(PAGES))
 
-#href = f'<a href="https://github.com/nicolamelluso/impactApp/blob/master/data/sents_ALL.xlsx" download="impact_database.xlsx">Download the Database here</a>'
-st.sidebar.markdown('[https://github.com/nicolamelluso/impactApp/blob/master/data/sents_ALL.xlsx](Download the databse here)', unsafe_allow_html=True)
+href = f'<a href="https://github.com/nicolamelluso/impactApp/raw/master/data/sents_ALL.xlsx" download="impact_database.xlsx">Download the Database here</a>'
+st.sidebar.markdown(href, unsafe_allow_html=True)
 
 
 
@@ -201,8 +201,13 @@ if selection == 'Try to classify':
 else:
     
     st.header('Examining societal impact of research with Semantic Hypergraphs')
+    href = f'<a href="https://github.com/nicolamelluso/impactApp/raw/master/data/sents_ALL.xlsx" download="impact_database.xlsx">download it here</a>'
+    st.markdown('To explore the entire database, '+href, unsafe_allow_html=True)
     st.markdown('In this page it is possible to explore a dump of random sentences from the analysis of impact sentences')
+    
+    
 
+    
     HTML_WRAPPER = """<div style="overflow-x: auto; border: 1px solid #e6e9ef; border-radius: 0.25rem; padding: 0.5rem; margin-bottom: 0.5rem">{}</div>"""
     
     DEFAULT_SENT = '1000S00004'
