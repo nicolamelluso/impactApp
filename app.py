@@ -141,6 +141,11 @@ st.sidebar.markdown("# Examining societal impact of research with Semantic Hyper
 st.sidebar.markdown("## Navigation")
 selection = st.sidebar.radio("Go to", list(PAGES))
 
+#href = f'<a href="https://github.com/nicolamelluso/impactApp/blob/master/data/sents_ALL.xlsx" download="impact_database.xlsx">Download the Database here</a>'
+st.sidebar.markdown('[https://github.com/nicolamelluso/impactApp/blob/master/data/sents_ALL.xlsx](Download the databse here)', unsafe_allow_html=True)
+
+
+
 if selection == 'Try to classify':
 
     DEFAULT_TEXT = "The research at the University of Glasgow lead to improvement of access to justice for victims of domestic abuse, shaping legislative change and providing the resources required for practitioners in this field to identify best practices across Scotland."
